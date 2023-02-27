@@ -35,6 +35,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import edu.uksw.fti.pam.acitivityintent.ui.theme.PAMAcitivityIntentTheme
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
@@ -76,7 +77,7 @@ fun HomePage(name: String) {
             textAlign = TextAlign.Center,
             color = Color.White,
         )
-        Text(text = "Mostly Clear",
+        Text(text = stringResource(id = R.string.clearr),
             fontSize = 15.sp,
             textAlign = TextAlign.Center,
             color = Color.LightGray

@@ -23,7 +23,11 @@ import androidx.compose.ui.unit.sp
 import edu.uksw.fti.pam.acitivityintent.R
 import edu.uksw.fti.pam.acitivityintent.ui.theme.PAMAcitivityIntentTheme
 import StoreUserData
+
 import android.content.Context
+import androidx.compose.material.Icon
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.ui.platform.LocalContext
 
 
@@ -31,7 +35,9 @@ import androidx.compose.ui.platform.LocalContext
 fun ProfileScreen() {
     val context = LocalContext.current
     val dataStore = StoreUserData(context)
+
     var savedFirstName = dataStore.getName.collectAsState(initial = "")
+
 
     Column(
         modifier = Modifier
@@ -82,9 +88,11 @@ fun ProfileScreen() {
             modifier = Modifier
                 .padding(top = 180.dp)
         )
+
+
     }
 
-
+    Icons.Default.Home
 
 }
 

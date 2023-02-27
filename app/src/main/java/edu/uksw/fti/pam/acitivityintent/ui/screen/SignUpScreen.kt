@@ -1,6 +1,7 @@
 package edu.uksw.fti.pam.acitivityintent.ui.screen
 
 import StoreUserData
+
 import android.content.Context
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -29,7 +30,7 @@ fun SignPage(
     val dataStore = StoreUserData(context)
 
     var savedFirstName = dataStore.getName.collectAsState(initial = "")
-    var savedLastName = dataStore.getName.collectAsState(initial = "")
+
     var firstNameInput by remember { mutableStateOf("") }
     var lastNameInput by remember { mutableStateOf("") }
     var usernameInput by remember { mutableStateOf("") }
@@ -97,10 +98,12 @@ fun SignPage(
                     //launch the class in a coroutine scope
                     scope.launch {
                         dataStore.saveName(firstNameInput)
+
                         btnOnClickAction(usernameInput)
                     }
                 },
             ) {
+                Text(text = stringResource(R.string.btn_title_login))
             }
         }
     }

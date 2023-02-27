@@ -4,15 +4,18 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -30,7 +33,7 @@ fun ForecastScreen() {
 
     ) {
         Text(
-            text = "Weather Forecast",
+            text = stringResource(id = R.string.weather_forecast),
             fontWeight = FontWeight.Bold,
             color = Color.White,
             modifier = Modifier
@@ -55,7 +58,7 @@ fun ForecastScreen() {
         ) {
 
             Text(
-                text = "Today",
+                text = stringResource(id = R.string.Today),
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
@@ -63,7 +66,7 @@ fun ForecastScreen() {
 
 
             Text(
-                text = "5-day forecast",
+                text = stringResource(id = R.string.day_forcast),
                 Modifier.fillMaxWidth(),
                 textAlign = TextAlign.End,
                 fontSize = 20.sp,
@@ -124,16 +127,20 @@ fun ForecastScreen() {
         }
         Row() {
             TextGenerator(textInput = "34°", offsetInput = 165.dp)
-            TextGenerator(textInput = "32°", offsetInput = 165.dp)
+            TextGenerator(textInput = "20°", offsetInput = 165.dp)
             TextGenerator(textInput = "31°", offsetInput = 165.dp)
             TextGenerator(textInput = "28°", offsetInput = 165.dp)
         }
 
-        Row (modifier = Modifier){
+        Row(Modifier.padding(top = 220.dp, start = 25.dp, end =25.dp)) {
+            Divider(color = Color.White, thickness = 1.dp)
+        }
 
-            TextGenerator("Monday", offsetInput = 250.dp)
+        Row (
+            modifier = Modifier
+            ){
 
-
+            TextGenerator(stringResource(id = R.string.monday), offsetInput = 250.dp)
 
             Image(
                 painter = painterResource(id = R.drawable.img_7),
@@ -148,7 +155,7 @@ fun ForecastScreen() {
 
         Row (modifier = Modifier){
 
-            TextGenerator("Tuesday", offsetInput = 330.dp)
+            TextGenerator(stringResource(id = R.string.tuesday), offsetInput = 330.dp)
 
 
 
@@ -165,7 +172,7 @@ fun ForecastScreen() {
 
         Row (modifier = Modifier){
 
-            TextGenerator("Wednesday", offsetInput = 410.dp)
+            TextGenerator(stringResource(id = R.string.wedneseday), offsetInput = 410.dp)
 
 
 
@@ -182,7 +189,7 @@ fun ForecastScreen() {
 
         Row (modifier = Modifier){
 
-            TextGenerator("Thursday", offsetInput = 490.dp)
+            TextGenerator(stringResource(id = R.string.thursday), offsetInput = 490.dp)
 
 
 
@@ -197,7 +204,9 @@ fun ForecastScreen() {
             )
         }
 
-
+        Row(Modifier.padding(top = 550.dp, start = 25.dp, end =25.dp)) {
+            Divider(color = Color.White, thickness = 1.dp)
+        }
 
 
 

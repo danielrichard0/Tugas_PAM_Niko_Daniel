@@ -6,8 +6,16 @@
     <string name="label_firstname">Firstname</string>
     <string name="label_lastname">Last Name</string>
     <string name="label_confirmPassword">Confirm Password</string>
-    <string name="btn_title_login" translatable="false">Login</string>
-    <string name="btn_title_signup" translatable="false">Sign up</string>
+    <string name="btn_title_login" >Login</string>
+    <string name="btn_title_signup">Sign up</string>
     <string name="btn_label_ok" translatable="false">Ok</string>
-
+    <string name="forecast">Forecast</string>
+    <string name="weather_forecast">Weather Forecast</string>
+    <string name="Today">Today</string>
+    <string name="day_forcast">5-day Forcast</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wedneseday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="clearr">Mostly Clear !</string>
 </resources>
