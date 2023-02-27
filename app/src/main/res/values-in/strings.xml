@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">PAM Acitivity Intent</string>
+    <string name="btn_login_title">Login</string>
+    <string name="label_username">nama pengguna</string>
+    <string name="label_password">kata sandi</string>
+    <string name="label_firstname">Nama Pertama</string>
+    <string name="label_lastname">Nama Terakhir</string>
+    <string name="label_confirmPassword">Konfirmasi Password</string>
+</resources>
